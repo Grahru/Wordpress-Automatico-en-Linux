@@ -78,8 +78,7 @@ wp core install \
   
   # Modificamos automaticamente el nombre que establece por defecto el plugin wpd-hide-login
   wp option update whl_page $WORDPRESS_HIDE_LOGIN --path=/var/www/html --allow-root
-  # Copiamos el nuevo archivo .htaccess
-  cp ../htaccess/.htaccess /var/www/html
+
 
   #Modificamos el propietario y el grupo del directorio /var/www/html
   chown -R www-data:www-data /var/www/html
