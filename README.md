@@ -1,4 +1,4 @@
-# Practica 1.7: Instalación y la configuración de WordPress utilizando la utilidad WP-CLI
+# Wordpress Automatizado en Linux
 
 Este repositorio contiene todos los archivos y scripts necesarios para la instalación y configuración automatizada de WordPress sobre una pila LAMP. A continuación se detalla el contenido del repositorio y su estructura.
 
@@ -16,13 +16,11 @@ La estructura del repositorio es la siguiente:
 ├── README.md  
 ├── conf
 │ └── 000-default.conf
-├── htaccess
-│ └── .htaccess
 └── scripts
-├── .env
-├── install_lamp.sh
-├── setup_letsencrypt_https.sh
-└── deploy_wordpress_with_wpcli.s
+   ├── .env
+   ├── install_lamp.sh
+   ├── execute.sh
+   └── deploy_wordpress_with_wpcli.s
 ```
 
 ## Contenido del Deploy
@@ -51,7 +49,6 @@ Este script automatiza la instalación y configuración de WordPress utilizando 
    - Se instala y activa uno o varios plugins con `wp plugin install --activate`.
    - Se configuran los permalinks con la estructura `/%postname%/` con `wp rewrite structure`.
    - Se modifica el nombre de acceso predeterminado proporcionado por el plugin wpd-hide-login.
-   - Se copia el archivo `.htaccess` desde el directorio `../htaccess/` al directorio raíz de WordPress.
    - Se modifica el propietario y grupo del directorio `/var/www/html` para que sea accesible por el servidor web.
 ## Ejecucion de los Scripts
 ### install_lamp
