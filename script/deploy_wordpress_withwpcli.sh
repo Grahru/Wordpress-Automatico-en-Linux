@@ -12,6 +12,12 @@ apt update
 # Importamos el archivo de variables .env
 source .env
 
+# Completar archivo de configuracion
+sed -i "s(CERTIFICATE_DOMAIN($CERTIFICATE_DOMAIN(" /etc/apache2/sites-available/000-default.conf
+sed -i "s(Path_private_key($Path_private_key(" /etc/apache2/sites-available/000-default.conf
+sed -i "s(Path_certificate($Path_certificate(" /etc/apache2/sites-available/000-default.conf
+sed -i "s(Path_chain($Path_chain(" /etc/apache2/sites-available/000-default.conf
+
 # Eliminamos instalaciones previas
 rm -rf /tmp/wp-cli.phar
 
