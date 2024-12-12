@@ -16,11 +16,8 @@ source .env
 wget https://amazoncloudwatch-agent.s3.amazonaws.com/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb -P /tmp/
 dpkg -i /tmp/amazon-cloudwatch-agent.deb
 
-# Instalar collectd
-apt install collectd -y
 # Mover archivo de configuracion a cloudwatch agent
 cp ../json/config.json /opt/aws/amazon-cloudwatch-agent/bin/
-
 
 # Configurar cloudwatch
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl \
